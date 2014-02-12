@@ -1,5 +1,3 @@
-#include "include.h"
-
 void choise(int *a, int n)
 {
 	int i, j, p, t;

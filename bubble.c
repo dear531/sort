@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void bubble(int *a,int n)
+void bubble(int *a, int n)
 {
 	int i, j, t, swp = 0;
 	for(i = 0; i < n - 1 && !swp; i++)
