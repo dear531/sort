@@ -1,4 +1,4 @@
-#if 1
+#if 0
 void bubble(int *a, int n)
 {
 	int i, j, t, swp = 1;
