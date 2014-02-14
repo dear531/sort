@@ -1,4 +1,4 @@
-#if 0
+#if 1
 void bubble(int *a, int n)
 {
 	int i, j, t, swp = 1;
@@ -7,11 +7,11 @@ void bubble(int *a, int n)
 		swp = 0;
 		for(j = 0; j < n - 1 - i; j++)
 		{
-			if(a[j] > a[j+1])
+			if(a[j + 1] < a[j])
 			{
-				t = a[j];
-				a[j] = a[j+1];
-				a[j+1] = t;
+				t = a[j + 1];
+				a[j + 1] = a[j];
+				a[j] = t;
 				swp = 1;
 			}
 		}
