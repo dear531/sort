@@ -1,19 +1,19 @@
-#if 0
+#if 1
 void choise(int *a, int n)
 {
 	int i, j, p, t;
-	for(i = 0;i < n - 1; i++)
+	for(i = 1;i < n; i++)
 	{
-		p = i;
-		for(j = i + 1; j < n; j++)
+		p = i - 1;
+		for(j = i; j < n; j++)
 		{
 			if(a[p] > a[j])
 				p = j;
 		}
-		if(p != i)
+		if(p != i - 1)
 		{
-			t=a[i];
-			a[i]=a[p];
+			t=a[i - 1];
+			a[i - 1]=a[p];
 			a[p]=t;
 		}
 	}
