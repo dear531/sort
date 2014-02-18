@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "head.h"
+#include "search.h"
 
 #define array_size(a) (sizeof(a) / sizeof(*a))
 
@@ -11,5 +12,6 @@ int main(int argc, char* argv[])
 	insert(a, array_size(a));
 	for (i = 0; i < array_size(a); i++)
 		printf("a[%d] = %d\n", i, a[i]);
+	printf("result:%d\n", binary(a, array_size(a), 5));
 	return 0;
 }
