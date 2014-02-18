@@ -51,13 +51,35 @@ void insert(int *a, int n)
 	return;
 }
 
+/* search function binary */
+int binary(int *a, int n, int k)
+{
+	int low = 0, high = n - 1, mid;
+	while(low <= high)
+	{
+		mid = low + ((high - low) / 2);
+		if(a[mid] == k)
+			return mid;
+		else if(a[mid] > k)
+			high = mid - 1;
+		else
+			low = mid + 1;
+	}
+	if(low > high)
+		return  -1;
+	return -1;
+}
+
 int main(int argc, char *argv[])
 {
 	int a[] = {1, 3, 5, 7, 2, 4, 6, 8};
 	int n = sizeof(a) / sizeof(*a);
 	int i;
+	int s = 5;
 	insert(a, n);	
 	for (i = 0; i < n; i++)
 		printf("a[%d]:%d\n", i, a[i]);
+	printf("search %d result %d\n",
+			s, binary(a, n, s));
 	return 0;
 }

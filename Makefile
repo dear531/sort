@@ -15,5 +15,7 @@ collect:collect.c
 	$(CC) $^ -o $@
 clean:
 	-rm -rf $(obj) collect.o
+cleanall:clean
+	-rm -rf a.out collect
 .PHONY:
-	default all clean
+	default all clean cleanall
