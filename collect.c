@@ -54,19 +54,18 @@ void insert(int *a, int n)
 /* search function binary */
 int binary(int *a, int n, int k)
 {
-	int low = 0, high = n - 1, mid;
-	while(low <= high)
+	int high, low, mid;
+	for (low = 0, high = n - 1, mid = (n - 1) / 2;\
+			high >= low; mid = (high + low) / 2)
 	{
-		mid = low + ((high - low) / 2);
-		if(a[mid] == k)
+		if (a[mid] == k)
 			return mid;
 		else if(a[mid] > k)
 			high = mid - 1;
 		else
 			low = mid + 1;
 	}
-	if(low > high)
-		return  -1;
+
 	return -1;
 }
 
